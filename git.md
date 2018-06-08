@@ -1,6 +1,6 @@
 # git 常用命令
 - - - - - - - - - 
-### 主分支
+1. 主分支
   > git clone git地址 从服务器上将代码拉下来
 
   > git pull 拉取代码
@@ -27,12 +27,12 @@
 
   > git reflog 查看历史命令
 
-### 分支
- 1. 新建分支
+2. 分支
+ * 新建分支
 
    > git branch branch-name
 
- 2. 删除分支
+ * 删除分支
 
    > git branch -r 先查看分支
 
@@ -40,7 +40,7 @@
 
    > git push origin :branch-name
 
- 3. 分支拉取推送
+ * 分支拉取推送
 
    > git clone -b branch-name git地址 直接拉取分支上的代码
 
@@ -50,7 +50,7 @@
 
    > git checkout branch-name 切换到branch-name分支上
 
-### 拉取主分支的代码到分支上
+3. 拉取主分支的代码到分支上
 
   > git status 查看当前是在那个分支上
 
@@ -64,7 +64,7 @@
 
   > git push origin branch-name 推送分支
 
-### 解决冲突
+4. 解决冲突
 
   > git stash push 将文件推到一个临时空间
   
