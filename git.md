@@ -69,3 +69,20 @@
    > git stash push 将文件推到一个临时空间
   
    > git stash pop 将文件从临时空间pop下来
+
+5. 修改git拉取时的http或者ssh
+   
+   > ls -la
+
+   > cd .git
+
+   > vim config 进入编辑模式
+
+   > i 编辑 url
+
+   > esc :wq 退出编辑模式
+
+6. 修改 host 
+   
+   > sudo vi /etc/hosts
+   
