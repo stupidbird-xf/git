@@ -72,9 +72,9 @@
 
 5. 修改git拉取时的http或者ssh
    
-   > ls -la
+   > ls -la 产看目录
 
-   > cd .git
+   > cd .git 进入git文件
 
    > vim config 进入编辑模式
 
@@ -85,4 +85,3 @@
 6. 修改 host 
    
    > sudo vi /etc/hosts
-   
