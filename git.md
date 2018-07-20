@@ -1,6 +1,8 @@
 # git 常用命令
 - - - - - - - - - 
+#### 一 常用 拉取推送命令
 1. 主分支
+
    > git clone git地址 从服务器上将代码拉下来
 
    > git pull 拉取代码
@@ -21,7 +23,7 @@
 
    > git log 查看commit 日志
 
-   > git reset —hard commit _id 回退到某个commit
+   > git reset —hard commit id 回退到某个commit
 
    > git reset —hard head^ 回退到上一个版本
 
@@ -70,7 +72,8 @@
   
    > git stash pop 将文件从临时空间pop下来
 
-5. 修改git拉取时的http或者ssh
+#### 二 终端编辑
+1. 修改git拉取时的http或者ssh
    
    > ls -la 产看目录
 
@@ -82,6 +85,39 @@
 
    > esc :wq 退出编辑模式
 
-6. 修改 host 
+2. 修改 host 
    
    > sudo vi /etc/hosts
+
+#### 三 git 配置 ssh
+
+1. 生成密钥对
+
+   > cd .ssh 进入ssh 文件
+
+   > ls 产看目录
+
+   > ssh-keygen -t rsa -C "your_email@youremail.com"   提示Creates a new ssh key using the provided email # Generating public/private rsa key pair.
+   Enter file in which to save the key (/home/you/.ssh/id_rsa):
+
+   > enter
+
+   > 输入密码 再次输入密码
+
+2. 添加公钥到你的远程仓库（github）
+
+   > cat .ssh/id_rsa.pub
+
+   > 登陆你的github帐户。点击你的头像，然后 Settings -> 左栏点击 SSH and GPG keys -> 点击 New SSH key
+
+   > 然后你复制上面的公钥内容，粘贴进“Key”文本域内。 title域，自己随便起个名字。
+
+   > 点击 Add key。
+
+   > ssh -T git@github.com 验证这个key是不是正常工作  提示Hi xxx! You've successfully authenticated, but GitHub does not # provide shell access.
+
+3. 修改git的remote url
+
+   > git remote -v  查看你当前的 remote url
+
+   > git remote set-url origin sshurl  调整你的url。
