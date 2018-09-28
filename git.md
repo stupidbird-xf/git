@@ -25,10 +25,6 @@
 
    > git log 查看commit 日志
 
-   > git reset —hard commit id 回退到某个commit
-
-   > git reset —hard head^ 回退到上一个版本
-
    > git reflog 查看历史命令
 
 2. 分支
@@ -73,6 +69,29 @@
    > git stash push 将文件推到一个临时空间
   
    > git stash pop 将文件从临时空间pop下来
+
+5. commit
+   
+   * commit 但未 push
+   
+   > git reset --hard commit_id 回退到某个commit 完成撤销,同时将代码恢复到前一commit_id 对应的版本
+
+   > git reset --hard HEAD^ 回退到上一个版本
+
+      > --mixed 
+       意思是：不删除工作空间改动代码，撤销commit，并且撤销git add . 操作
+       这个为默认参数,git reset --mixed HEAD^ 和 git reset HEAD^ 效果是一样的。
+
+      > --soft  
+       不删除工作空间改动代码，撤销commit，不撤销git add . 
+
+      > --hard
+       删除工作空间改动代码，撤销commit，撤销git add . 
+       注意完成这个操作后，就恢复到了上一次的commit状态。
+
+   * 修改commit 注释
+   
+   > git commit --amend 此时会进入默认vim编辑器，修改注释完毕后保存就好了。
 
 #### 二 终端编辑
 1. 修改git拉取时的http或者ssh
