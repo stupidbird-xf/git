@@ -101,7 +101,7 @@
 
    * commit 并 push
 
-   1. git reset –soft commit_id 重置至指定版本的提交 保留当前工作区，以便重新提交 
+   1. git reset –soft commit_id 重置至指定版本的提交 保留当前工作区，以便重新提交
 
    2. git log确认是否成功撤销
 
